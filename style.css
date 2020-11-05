@@ -1,0 +1,13 @@
+h1 {
+    color: red; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 25%; 
+}
+
