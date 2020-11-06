@@ -23,7 +23,10 @@ const picturesArray = [
     "pictures/human22.jpg"
 ]; 
 
-const container = document.querySelector("div.container")
+const container = document.querySelector("div.container"); 
+const picCount = document.getElementById("picCount"); 
+picCount.textContent = `Although there are 9 pictures on the gallery, there are ${picturesArray.length} pictures available`
+
 container.addEventListener("click", function(evt) {
     let picture = evt.target; 
     let random = Math.floor((Math.random() * picturesArray.length)); 
