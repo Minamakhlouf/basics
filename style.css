@@ -1,5 +1,7 @@
 h1 {
     color: red; 
+    text-align: center; 
+    background: lightblue; 
 }
 
 .container {
@@ -10,5 +12,14 @@ h1 {
 img {
     width: 30%;
     margin: 0 auto;  
+}
+
+h2 {
+    text-align: center; 
+    background: lightblue; 
+}
+
+#counter {
+    text-align: center; 
 }
 

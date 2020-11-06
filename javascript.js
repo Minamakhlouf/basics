@@ -37,6 +37,9 @@ const picturesArray = [
 const container = document.querySelector("div.container"); 
 const picCount = document.getElementById("picCount"); 
 const images = document.querySelectorAll("img"); 
+const clickCounter = document.getElementById("counter"); 
+let counter = 0
+
 
 picCount.textContent = `Although there are 9 pictures on the gallery, there are ${picturesArray.length} pictures available`
 
@@ -44,4 +47,6 @@ container.addEventListener("click", function(evt) {
     let picture = evt.target; 
     let random = Math.floor((Math.random() * picturesArray.length)); 
     picture.setAttribute("src", picturesArray[random]); 
+    counter+= 1; 
+    clickCounter.textContent = `You've changed the gallery ${counter} times`
 })
