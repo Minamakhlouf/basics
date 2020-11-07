@@ -6,10 +6,10 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <h1>Main Header</h1>
+        <h1>Main Heading</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, saepe. Voluptates dignissimos voluptate, vitae perspiciatis fuga maxime omnis natus adipisci rerum earum assumenda? Sequi perspiciatis molestiae qui beatae ipsum placeat?</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, repudiandae sint a voluptatibus beatae soluta deserunt quas odit. Officia tenetur provident quia sed incidunt similique expedita. Ipsa doloribus quo voluptas?</p>
-        <p>This is a random suggestion to visit <a href="http://wwww.wikipedia.org">Wikipedia</a></p>
+        <p>This is a random suggestion to visit <a href="http://www.wikipedia.org">Wikipedia</a></p>
         <p>This is an ordered list</p>
         <ol>
             <li>First Item</li>
@@ -34,16 +34,29 @@
             <img src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Uncopywrited Human Image">
         </div>
         <h2>Making a simple form</h2>
-        <form>
+        <form method="POST">
             <label for="firstName">First Name: </label>
-            <input type="text" id="firstName" required> <br>
+            <input type="text" id="firstName" required name="firstname"> <br>
             <label for="firstName">Last Name: </label>
-            <input type="text" id="lastName" required> <br>
+            <input type="text" id="lastName" required name="lastname"> <br>
             <label for="birthdate">Date of Birth:</label>
-            <input type="date" id="birthdate" required> <br>
+            <input type="date" id="birthdate" required name="dob"> <br>
             <label for="email">E-mail: </label>
-            <input type="text" id="email"> <br>
-            <input type="submit">
+            <input type="email" id="email" required name="email"> <br>
+            <label for="password">Password</label>
+            <input type="password" minlength="5" name="password"> <br>
+            Gender: <br>
+            <input type="radio" name="gender" id="male" value="male"> <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female"> <label for="female">Female</label>
+            <input type="radio" name="gender" id="other" value="other"> <label for="other">Other</label> <br>
+            Favourite Season: <br>
+            <select name="" id="">
+                <option value="Winter" name="season">Winter</option>
+                <option value="Spring" name="season">Spring</option>
+                <option value="Summer" name="season">Summer</option>
+                <option value="Fall" name="season">Fall</option>
+            </select> <br>
+            <input type="submit" value="Register">
         </form>
         <script src="javascript.js"></script> 
     </body>
