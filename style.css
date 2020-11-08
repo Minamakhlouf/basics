@@ -12,6 +12,11 @@ h1 {
 img {
     width: 30%;
     margin: 0 auto;  
+    transition: all 1s; 
+}
+
+img:hover {
+    transform: scale(1.1); 
 }
 
 h2 {
