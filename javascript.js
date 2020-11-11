@@ -39,14 +39,37 @@ const picCount = document.getElementById("picCount");
 const images = document.querySelectorAll("img"); 
 const clickCounter = document.getElementById("counter"); 
 let counter = 0
+let imageSrc = []; 
 
 
 picCount.textContent = `Although there are 9 pictures on the gallery, there are ${picturesArray.length} pictures available`
 
+function srcCollection() {
+    for (let i=0; i<images.length; i++) {
+        imageSrc.push(images[i].getAttribute("src")); 
+    }
+    console.log(imageSrc); 
+    return imageSrc
+}
+
+function noDuplicates() {
+    let random = Math.floor((Math.random() * picturesArray.length)); 
+    if (imageSrc.includes(picturesArray[random])) {
+        noDuplicates()
+    } 
+    console.log(random)
+    return random; 
+}
+
 container.addEventListener("click", function(evt) {
     let picture = evt.target; 
-    let random = Math.floor((Math.random() * picturesArray.length)); 
+    imageSrc = srcCollection(); 
+    let random = noDuplicates(); 
     picture.setAttribute("src", picturesArray[random]); 
     counter+= 1; 
     clickCounter.textContent = `You've changed the gallery ${counter} times`
+    imageSrc = []; 
+    console.log(images.src); 
 })
+
+
