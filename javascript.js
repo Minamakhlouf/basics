@@ -48,7 +48,6 @@ function srcCollection() {
     for (let i=0; i<images.length; i++) {
         imageSrc.push(images[i].getAttribute("src")); 
     }
-    console.log(imageSrc); 
     return imageSrc
 }
 
@@ -57,19 +56,20 @@ function noDuplicates() {
     if (imageSrc.includes(picturesArray[random])) {
         noDuplicates()
     } 
-    console.log(random)
     return random; 
 }
 
 container.addEventListener("click", function(evt) {
     let picture = evt.target; 
-    imageSrc = srcCollection(); 
+    console.log(picture) 
+    let imageSrc = srcCollection(); 
     let random = noDuplicates(); 
     picture.setAttribute("src", picturesArray[random]); 
     counter+= 1; 
     clickCounter.textContent = `You've changed the gallery ${counter} times`
-    imageSrc = []; 
-    console.log(images.src); 
-})
+    imageSrc = [];  
+}); 
+
+
 
 
