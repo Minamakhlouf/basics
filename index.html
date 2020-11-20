@@ -62,17 +62,27 @@
         </div>
         <h2>Making a simple form</h2>
         <form method="POST">
-            <label for="firstName">First Name: </label>
-            <input type="text" id="firstName" required name="firstname"> <br>
-            <label for="firstName">Last Name: </label>
-            <input type="text" id="lastName" required name="lastname"> <br>
-            <label for="birthdate">Date of Birth:</label>
-            <input type="date" id="birthdate" required name="dob"> <br>
-            <label for="email">E-mail: </label>
-            <input type="email" id="email" required name="email"> <br>
-            <label for="password">Password</label>
-            <input type="password" minlength="5" name="password"> <br>
-            Gender: <br>
+            <div>
+                <label for="firstName">First Name: </label>
+                <input type="text" id="firstName" required name="firstname"> 
+            </div>
+            <div>            
+                <label for="firstName">Last Name: </label>
+                <input type="text" id="lastName" required name="lastname"> 
+            </div>
+            <div>            
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" id="birthdate" required name="dob"> 
+            </div>
+            <div>
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" required name="email"> 
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" minlength="5" name="password"> 
+            </div>
+            <label for="gender">Gender: </label> 
             <input type="radio" name="gender" id="male" value="male"> <label for="male">Male</label>
             <input type="radio" name="gender" id="female" value="female"> <label for="female">Female</label>
             <input type="radio" name="gender" id="other" value="other"> <label for="other">Other</label> <br>
@@ -84,6 +94,24 @@
                 <option value="Fall" name="season">Fall</option>
             </select> <br>
             <input type="submit" value="Register">
+        </form>
+        <h2>Make searches on other websites from your own form!!</h2>
+        <p>Below, you'll find forms to make searches on YouTube, Reddit and Google.</p>
+        <p>Fill out the search input below and you'll be directed to the search area of that website</p>
+        <form action="https://www.youtube.com/results">
+            <label for="YouTube">YouTube Search</label>
+            <input type="text" id="YouTube" name="search_query" required>
+            <button>Click on me to search YouTube</button>
+        </form>
+        <form action="https://www.google.com/search">
+            <label for="google">Google Search</label>
+            <input type="text" id="google" name="q" required>
+            <button>Click on me to search Google</button>
+        </form>
+        <form action="https://www.reddit.com/search">
+            <label for="reddit">Reddit Search: </label>
+            <input type="text" id="reddit" name="q" required>
+            <button>Click on me to search Reddit</button>
         </form>
         <script src="javascript.js"></script> 
     </body>

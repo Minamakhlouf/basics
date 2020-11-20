@@ -70,6 +70,8 @@ container.addEventListener("click", function(evt) {
     imageSrc = [];  
 }); 
 
-
+picturesArray.filter(function() {
+    
+})
 
 
