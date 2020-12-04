@@ -38,6 +38,9 @@ const container = document.querySelector("div.container");
 const picCount = document.getElementById("picCount"); 
 const images = document.querySelectorAll("img"); 
 const clickCounter = document.getElementById("counter"); 
+const toDoButton = document.querySelector("#toDoButton")
+const toDoItem = document.querySelector("#toDoItem")
+const listUL = document.querySelector(".list"); 
 let counter = 0
 let imageSrc = []; 
 
@@ -74,4 +77,11 @@ picturesArray.filter(function() {
     
 })
 
-
+toDoButton.addEventListener("click", function() {
+    if (toDoItem.value !== "") {
+        let li = document.createElement("li"); 
+        li.textContent = toDoItem.value; 
+        listUL.append(li); 
+        toDoItem.value = ""; 
+    }
+})
