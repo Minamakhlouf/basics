@@ -38,7 +38,6 @@ const container = document.querySelector("div.container");
 const picCount = document.getElementById("picCount"); 
 const images = document.querySelectorAll("img"); 
 const clickCounter = document.getElementById("counter"); 
-const toDoButton = document.querySelector("#toDoButton")
 const toDoItem = document.querySelector("#toDoItem")
 const listUL = document.querySelector(".list"); 
 let counter = 0
@@ -77,8 +76,8 @@ picturesArray.filter(function() {
     
 })
 
-toDoButton.addEventListener("click", function() {
-    if (toDoItem.value !== "") {
+toDoItem.addEventListener("keypress", function(e) {
+    if (toDoItem.value !== "" && e.which === 13) {
         let li = document.createElement("li"); 
         li.textContent = toDoItem.value; 
         listUL.append(li); 
