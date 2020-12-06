@@ -46,35 +46,29 @@ let imageSrc = [];
 
 picCount.textContent = `Although there are 9 pictures on the gallery, there are ${picturesArray.length} pictures available`
 
-function srcCollection() {
-    for (let i=0; i<images.length; i++) {
-        imageSrc.push(images[i].getAttribute("src")); 
-    }
-    return imageSrc
-}
-
-function noDuplicates() {
-    let random = Math.floor((Math.random() * picturesArray.length)); 
-    if (imageSrc.includes(picturesArray[random])) {
-        noDuplicates()
-    } 
-    return random; 
-}
-
 container.addEventListener("click", function(evt) {
-    let picture = evt.target; 
-    console.log(picture) 
-    let imageSrc = srcCollection(); 
-    let random = noDuplicates(); 
-    picture.setAttribute("src", picturesArray[random]); 
+    let picturesOnBrowser = []; 
+    let pictures = []; 
+    for (let i = 0; i < picturesArray.length; i++) {
+        pictures.push(picturesArray[i]); 
+    }
+    for (let i = 0; i < images.length; i++) {
+        picturesOnBrowser.push(images[i].src)
+    }
+    for (let i = 0; i < picturesOnBrowser.length; i++) {
+        if (pictures.indexOf(picturesOnBrowser[i]) !== -1) {
+            let index = pictures.indexOf(picturesOnBrowser[i])
+            pictures.splice(index, 1); 
+        }
+    }
+    let random = Math.floor(Math.random() * pictures.length)
+    evt.target.src = pictures[random]; 
+    console.log(pictures)
     counter+= 1; 
     clickCounter.textContent = `You've changed the gallery ${counter} times`
-    imageSrc = [];  
 }); 
 
-picturesArray.filter(function() {
-    
-})
+
 
 toDoItem.addEventListener("keypress", function(e) {
     if (toDoItem.value !== "" && e.which === 13) {
