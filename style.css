@@ -68,15 +68,17 @@ h2 {
 #toDoList {
     width: 50vw; 
     margin: 20px auto; 
+    font-family: "Roboto", sans-serif; 
+    border: 2px solid black; 
 }
 
 #toDoList > input {
     width: 100%; 
-    padding: 5px; 
-}
-
-.list li {
-    list-style: none;
+    padding: 13px 13px 13px 20px; 
+    box-sizing: border-box; 
+    background: #f7f7f7; 
+    color: #2980b9; 
+    font-size: 18px; 
 }
 
 h3 > span {
@@ -86,5 +88,27 @@ h3 > span {
 }
 
 h3 {
+    background: #2980b9; 
+    color: white; 
     margin: 0; 
+    padding: 10px 20px; 
+    text-transform: uppercase; 
+}
+
+#toDoList ul{ 
+    padding: 0; 
+    margin: 0;  
+    width: 100%; 
+    list-style: none; 
+}
+
+#toDoList ul li:nth-of-type(even) {
+    background: gray; 
+    padding: 10px 20px; 
+    color: white; 
+}
+
+#toDoList ul li:nth-of-type(odd) {
+    background: white; 
+    padding: 10px 20px; 
 }

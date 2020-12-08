@@ -73,7 +73,10 @@ container.addEventListener("click", function(evt) {
 toDoItem.addEventListener("keypress", function(e) {
     if (toDoItem.value !== "" && e.which === 13) {
         let li = document.createElement("li"); 
+        let button = document.createElement("button");  
         li.textContent = toDoItem.value; 
+        button.textContent = "Remove"
+        listUL.append(button); 
         listUL.append(li); 
         toDoItem.value = ""; 
     }
