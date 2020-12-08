@@ -104,11 +104,25 @@ h3 {
 
 #toDoList ul li:nth-of-type(even) {
     background: gray; 
-    padding: 10px 20px; 
+    padding: 10px 0; 
     color: white; 
 }
 
 #toDoList ul li:nth-of-type(odd) {
     background: white; 
-    padding: 10px 20px; 
+    padding: 10px 0; 
+}
+
+#toDoList ul li span {
+    display: inline-block; 
+    opacity: 0; 
+    width: 0; 
+    transition: 0.2s linear; 
+    background: #e74c3c; 
+    text-align: center; 
+    margin-right: 20px; 
+}
+
+#toDoList ul li:hover span {
+    opacity: 1; 
 }
